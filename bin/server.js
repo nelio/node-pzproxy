@@ -22,10 +22,10 @@ proxy = new PZProxy({
 		port: 9999
 	},
 	cacheOpts: {
-		storage: "./data"
+		storage: "/tmp"
 	},
 	proxyOpts: {
-		target: "http://www.esquerda.net"
+		target: "http://www.google.com/"
 	},
 	defaultTTL: 30
 });
