@@ -11,7 +11,7 @@ A programmable and pluggable HTTP/HTTPS proxy for node.js
 	"use strict";
 
 	var
-	    PZProxy		= require('../lib/pzproxy');
+	    PZProxy = require('pzproxy');
 
 
 	// Create a proxy instance
