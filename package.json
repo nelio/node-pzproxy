@@ -11,10 +11,7 @@
     "url": "https://github.com/davidfoliveira/node-pzproxy/"
   },
   "main": "./lib/pzproxy",
-  "bin": {
-    "pzproxy": "./bin/pzproxy.js"
-  },
-  "dependencies": {},
+  "dependencies": { },
   "devDependencies": {},
   "optionalDependencies": {},
   "license": "Copyleft",
