@@ -2,11 +2,7 @@
 
 /*
  TODO:
- 	- Lock+Queue similar requests
- 	- Make a map of currently cache item in use and discard them
- 	- Move cache+proxy login to cacheproxy.js
- 	- Use SW4 heads for cache key and URL
- 	- Configurable number of backend connection sockets
+ 	- Make a map of currently cache items in use and discard the expired ones
  */
 
 "use strict";
