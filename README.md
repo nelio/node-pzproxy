@@ -45,9 +45,13 @@ A pluggable HTTP/HTTPS + cache + proxy library for node.js
 
 - `defaultTTL`: The default time-to-live (in seconds) for every request (it can be personalized by changing the req.cacheTTL property)
 
-- `onRequest`: Function for handling every request. The function arguments are `(request,response,callback)`
+- `onRequest()`: Function for handling every request. The function arguments are `(request,response,callback)`
 
-- `onFinish`: Function that is called once a request is served
+- `shouldCache()`: Function that is called to decide whether to cache or not. The function arguments are `(request,response,proxyRequest,proxyResponse)`. It should return a boolean value
+
+- `onFinish()`: Function that is called once a request is served. The function arguments are `(request,response,callback)`
+
+- `logAccess()`: Function that is called to log. The function arguments are `(request,response,length,flags)`
 
 - `debug`: Activates the debug mode with a `true` value - default `false`
 
