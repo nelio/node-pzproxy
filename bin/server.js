@@ -21,7 +21,7 @@ proxy = new PZProxy({
 		storage: "/tmp"
 	},
 	proxyOpts: {
-		target: "http://www.google.com/"
+		target: "http://www.sapo.pt/"
 	},
 	defaultTTL: 30
 });
