@@ -80,15 +80,20 @@ A pluggable HTTP/HTTPS + cache + proxy library for node.js
 
 By providing an `onRequest` function, you can fully customize your proxy rules. The first of the `onRequest` function arguments is `request` which is the node.js http.Server request with some extra properties:
 
-- cacheKey: The cache key that will be used for storing the answer of the current request on cache (default to req.url)
+- `cacheKey`: The cache key that will be used for storing the answer of the current request on cache (default to req.url)
 
-- cacheTTL: The time-to-live (in seconds) on cache for the answer to the current request;
+- `cacheTTL`: The time-to-live (in seconds) on cache for the answer to the current request;
 
-- backendURL: The URL that will be used to fetch the data to serve the current request;
+- `backendURL`: The URL that will be used to fetch the data to serve the current request;
 
-- xConnectDate: Request arrival date;
+- `xConnectDate`: Request arrival Date;
 
-- xRequestID: Internal request ID;
+- `xRequestID`: Internal request ID;
 
-- xRemoteAddr: Remote IP Address;
+- `xRemoteAddr`: Remote IP Address;
 
+## Useful response methods
+
+By providing an `onRequest` function, you can fully customize your proxy rules. The second of the `onRequest` function arguments is `response` which is the node.js http.Server response with some extra properties:
+
+- answer(status,headers,data): Answers the request with the supplied status, headers and data
