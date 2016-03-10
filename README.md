@@ -47,6 +47,9 @@ A pluggable HTTP/HTTPS + cache + proxy library for node.js
 
 - `onRequest`: Function for handling every request. The function arguments are `(request,response,callback)`
 
+- `onFinish`: Function that is called once a request is served
+
+- `debug`: Activates the debug mode with a `true` value - default `false`
 
 
 ## Default instantes
