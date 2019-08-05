@@ -3,7 +3,9 @@
     "name": "David Oliveira",
     "email": "d.oliveira@prozone.org"
   },
-  "contributors": [ "Nelio Vasconcelos Nunes <nelionunes@gmail.com>" ],
+  "contributors": [
+    "Nelio Vasconcelos Nunes <nelionunes@gmail.com>"
+  ],
   "name": "pzproxy",
   "description": "A programmable and pluggable HTTP/HTTPS proxy",
   "version": "0.3.5",
@@ -12,12 +14,20 @@
     "url": "https://github.com/davidfoliveira/node-pzproxy/"
   },
   "main": "./lib/pzproxy",
-  "dependencies": { },
-  "devDependencies": {},
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1"
+  },
   "optionalDependencies": {},
-  "license": "Copyleft",
+  "license": "MIT",
   "engines": {
     "node": ">=0.10.5"
+  },
+  "scripts": {
+    "lint": "eslint --config .eslintrc.js --ignore-pattern coverage --ignore-pattern acceptance_tests/node_modules lib/*"
   },
   "keywords": [
     "pzproxy",

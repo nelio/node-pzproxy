@@ -35,12 +35,8 @@ const proxy = new PZProxy({
 	serverOpts: {
 		port: 3000
 	},
-	cacheOpts: {
-		storage: "/tmp"
-	},
 	proxyOpts: {
-		target: config.backendTarget,
-		outputFilter
+		target: config.backendTarget
 	},
 	defaultTTL: 30
 });
