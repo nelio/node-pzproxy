@@ -1,5 +1,5 @@
 {
   "tableName": "",
   "region": "eu-west-1",
-  "backendTarget": "http://iris.product.ext.ynapgroup.com"
+  "backendTarget": ""
 }
