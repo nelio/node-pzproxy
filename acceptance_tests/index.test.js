@@ -110,6 +110,11 @@ describe('PzProxy with a transformation function being passed', () => {
         expect(response.data).toEqual("");
     });
 
+    test('404 for an non existing image', async () => {
+        const response = await axios.get(`http://127.0.0.1:3000/variants/images/5983760398711239629/in/w960_q80.jpg`,{ validateStatus: false });
+        expect(response.status).toBe(404);
+    });
+
 
     afterAll(() => {
         server.close();
