@@ -36,7 +36,8 @@ new PZProxy({
 		port: 3000
 	},
 	proxyOpts: {
-		target: config.backendTarget
+        target: config.backendTarget,
+        //        outputFilter
 	},
 	defaultTTL: 30
 });
