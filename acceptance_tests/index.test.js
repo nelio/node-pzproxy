@@ -91,7 +91,7 @@ describe('PzProxy with a transformation function being passed', () => {
 });
 
 
-describe('PzProxy with a transformation function being passed', () => {
+describe('PzProxy with a request to an image', () => {
     let server;
 
     beforeAll( async () => {
