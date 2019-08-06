@@ -1,30 +1,29 @@
 {
   "author": {
-    "name": "David Oliveira",
-    "email": "d.oliveira@prozone.org"
+    "name": "Nelio Vasconcelos Nunes",
+    "email": "nelionunes@gmail.com"
   },
   "contributors": [
-    "Nelio Vasconcelos Nunes <nelionunes@gmail.com>"
+    "David Oliveira <d.oliveira@prozone.org>"
   ],
   "name": "pzproxy",
   "description": "A programmable and pluggable HTTP/HTTPS proxy",
-  "version": "0.3.5",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidfoliveira/node-pzproxy/"
+    "url": "https://github.com/nelio/node-pzproxy/"
   },
   "main": "./lib/pzproxy",
   "dependencies": {
     "debug": "^4.1.1"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^17.1.1"
+    "eslint": "^6.1.0"
   },
   "optionalDependencies": {},
   "license": "MIT",
   "engines": {
-    "node": ">=0.10.5"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "lint": "eslint --config .eslintrc.js --ignore-pattern coverage --ignore-pattern acceptance_tests/node_modules lib/*"
@@ -33,7 +32,6 @@
     "pzproxy",
     "http",
     "https",
-    "proxy",
-    "cache"
+    "proxy"
   ]
 }
