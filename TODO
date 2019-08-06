@@ -1,3 +1,0 @@
-- Debugging rather than commented console.log() on cache.js, proxy.js and server.js
-- Support for 1 flag debug for all the modules or separated module debug as a feature
-- Support for decoupling the locking/queueing of requests

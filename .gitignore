@@ -1,3 +1,4 @@
 data/
 node_modules/
 .idea
+acceptance_tests/server.js

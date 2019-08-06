@@ -1,6 +1,6 @@
 # node-pzproxy 
 
-A pluggable HTTP/HTTPS + cache + proxy library for node.js
+A pluggable HTTP/HTTPS + proxy library for node.js
 
 ## Installing
 
@@ -19,9 +19,6 @@ A pluggable HTTP/HTTPS + cache + proxy library for node.js
 	    serverOpts: {
 	        port: 9999
 	    },
-	    cacheOpts: {
-	        storage: "./data"
-	    },
 	    proxyOpts: {
 	        target: "http://www.google.pt"
 	    },
@@ -35,10 +32,6 @@ A pluggable HTTP/HTTPS + cache + proxy library for node.js
 
 - `server`: An alternative HTTP server instance
 
-- `cacheOpts`: The options for the default cache mechanism (watch the default cache mechanism options below)
-
-- `cache`: An alternative cache meachnism instance
-
 - `proxyOpts`: The options for the default HTTP proxy (watch the default HTTP proxy mechanism options below)
 
 - `proxy`: An alternative HTTP proxy instance
@@ -48,8 +41,6 @@ A pluggable HTTP/HTTPS + cache + proxy library for node.js
 - `defaultTimeout`: The default backend request timeout (in seconds). The default value is: 60
 
 - `onRequest()`: Function for handling every request. The function arguments are `(request,response,callback)`
-
-- `shouldCache()`: Function that is called to decide whether to cache or not. The function arguments are `(request,response,proxyRequest,proxyResponse)`. It should return a boolean value
 
 - `onFinish()`: Function that is called once a request is served. The function arguments are `(request,response,callback)`
 
@@ -69,26 +60,14 @@ A pluggable HTTP/HTTPS + cache + proxy library for node.js
 - `port`: Port to bind on (or socket path with `proto` is "fastcgi") - defaults to 8080;
 
 
-### Default cache server (`cache`)
-
-- `storage`: Directory path where to store the cached objects;
-
-- `cleanupInterval`: Interval of time (in seconds) to run the cleanup mechanism, removing the expired cache object files;
-
-
 ### Default proxy (`proxy`)
 
 - `target`: Backend address where to send all the traffic. This parameter is optional, since you can specify a req.backendURL on the onRequest function;
 
 
-
 ## Useful request properties
 
 By providing an `onRequest` function, you can fully customize your proxy rules. The first of the `onRequest` function arguments is `request` which is the node.js http.Server request with some extra properties:
-
-- `cacheKey`: The cache key that will be used for storing the answer of the current request on cache (default to req.url)
-
-- `cacheTTL`: The time-to-live (in seconds) on cache for the answer to the current request;
 
 - `backendURL`: The URL that will be used to fetch the data to serve the current request;
 
